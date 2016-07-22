@@ -6,5 +6,6 @@ TIZEN_L10N=
 	"instructions" : "Instructions",
 	"avoid" : "Avoid the rocks by balancing the space ship using the rotation bezel.",
 	"score" : "Score",
-	"record" : "Record"
+	"record" : "Record",
+	"avoider" : "Avoider"
 };

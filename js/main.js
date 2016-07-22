@@ -51,8 +51,6 @@ window.onload = function () {
     imgHeart.src = 'images/heart.png'
     var imgRefresh = new Image();
     imgRefresh.src = 'images/refresh.png';
-    var imgSafe = new Image();
-    imgSafe.src = 'images/safe.png';
     var spriteExplosion = new Image();
     spriteExplosion.src = 'images/explosion.png';
     var imgRocket1 = new Image();
@@ -67,7 +65,6 @@ window.onload = function () {
     imgRock2.src = 'images/rock_2.png';
     var imgRock3 = new Image();
     imgRock3.src = 'images/rock_3.png';
-
 
     //Game
     var points     = 0,
@@ -348,7 +345,7 @@ window.onload = function () {
             ctx.font = "bold 25px Helvetica";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
-            ctx.fillText("Avoider", cW/2,cH/2 - 120);
+            ctx.fillText(TIZEN_L10N["avoider"], cW/2,cH/2 - 120);
 
             ctx.font = "bold 18px Helvetica";
             ctx.fillStyle = "white";
@@ -422,30 +419,7 @@ window.onload = function () {
     function random(from, to) {
         return Math.floor(Math.random() * (to - from + 1)) + from;
     }
-    
-    function randomSequence(size) {
-    	var sequence = [];
-    	for (var i = 0; i < size; i++) {
-    		sequence.push(random(1,23));
-    	}
-    	return sequence;
-    }
-    
-    CanvasRenderingContext2D.prototype.fillTextCircle = function(text,x,y,radius,numRadsPerLetter,startRotation){
-    	   this.save();
-    	   this.translate(x,y);
-    	   this.rotate(startRotation);
 
-    	   for(var i=0;i<text.length;i++){
-    	      this.save();
-    	      this.rotate(i*numRadsPerLetter);
-
-    	      this.fillText(text[i],0,-radius);
-    	      this.restore();
-    	   }
-    	   this.restore();
-    	}
-    
     function wrapText(text, x, y, maxWidth, lineHeight) {
         var words = text.split(' ');
         var line = '';
@@ -465,31 +439,5 @@ window.onload = function () {
         }
         ctx.fillText(line, x, y);
       }
-    
-    Array.prototype.equals = function (array) {
-        // if the other array is a falsy value, return
-        if (!array)
-            return false;
-
-        // compare lengths - can save a lot of time 
-        if (this.length != array.length)
-            return false;
-
-        for (var i = 0, l=this.length; i < l; i++) {
-            // Check if we have nested arrays
-            if (this[i] instanceof Array && array[i] instanceof Array) {
-                // recurse into the nested arrays
-                if (!this[i].equals(array[i]))
-                    return false;       
-            }           
-            else if (this[i] != array[i]) { 
-                // Warning - two different object instances will never be equal: {x:20} != {x:20}
-                return false;   
-            }           
-        }       
-        return true;
-    }
-    // Hide method from for-in loops
-    Object.defineProperty(Array.prototype, "equals", {enumerable: false});
 
 }

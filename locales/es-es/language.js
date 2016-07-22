@@ -2,9 +2,10 @@
 
 TIZEN_L10N=
 {
-	"tap_to_play" : "Tap to play...",
-	"instructions" : "Instructions",
-	"avoid" : "Avoid the rocks by balancing the space ship using the rotation bezel.",
-	"score" : "Score",
-	"record" : "Record"
+	"tap_to_play" : "Pulsa para jugar...",
+	"instructions" : "Instrucciones",
+	"avoid" : "Esquiva las rocas balanceando la nave utilizando el bisel rotatorio.",
+	"score" : "Puntuación",
+	"record" : "Record",
+	"avoider" : "Escapista"
 };

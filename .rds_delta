@@ -1,15 +1,6 @@
 #delete
 #add
-res/wgt/language.js
-res/wgt/locales/
-res/wgt/locales/en-gb/
-res/wgt/locales/en-gb/language.js
-res/wgt/locales/en-us/
-res/wgt/locales/en-us/language.js
-res/wgt/locales/es-es/
-res/wgt/locales/es-es/language.js
 #modify
 res/wgt/author-signature.xml
 res/wgt/signature1.xml
-res/wgt/index.html
 res/wgt/js/main.js
